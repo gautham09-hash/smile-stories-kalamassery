@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smile Stories Multispeciality Dental Clinic — HMT Junction, Kalamassery</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    html, body { font-family: 'Plus Jakarta Sans', sans-serif; background: #f6faf8; color: #071914; overflow-x: hidden; }
+    .serif { font-family: 'Instrument Serif', Georgia, serif; }
+    .hero-bg {
+      background:
+        radial-gradient(circle at 15% 20%, rgba(16, 185, 129, 0.22) 0%, transparent 45%),
+        radial-gradient(circle at 85% 15%, rgba(217, 155, 38, 0.14) 0%, transparent 40%),
+        linear-gradient(145deg, #031711 0%, #062c21 58%, #041f17 100%);
+    }
+    .glass-box {
+      background: rgba(255, 255, 255, 0.11);
+      backdrop-filter: blur(22px) saturate(180%);
+      -webkit-backdrop-filter: blur(22px) saturate(180%);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-emerald-500 selection:text-white">
+
+  <div class="bg-[#02120d] text-emerald-100/85 text-[11px] sm:text-xs py-2 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex justify-between items-center gap-2">
+      <span class="truncate">HMT Junction, South Kalamassery • Mon–Sat Care</span>
+      <a href="tel:+917561881771" class="text-emerald-300 font-bold shrink-0 hover:underline">Call 075618 81771</a>
+    </div>
+  </div>
+
+  <header class="sticky top-0 z-50 bg-[#041e17]/95 backdrop-blur-lg border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-3">
+      <a href="#" class="flex items-center gap-2.5 text-white min-w-0">
+        <div class="w-9 h-9 rounded-full bg-gradient-to-br from-emerald-400 to-teal-600 text-[#032018] font-extrabold flex items-center justify-center shrink-0">
+          S
+        </div>
+        <div class="leading-tight truncate">
+          <span class="block font-extrabold text-sm sm:text-base tracking-tight whitespace-nowrap">SMILE STORIES</span>
+          <span class="block text-[9.5px] uppercase tracking-widest text-emerald-300 font-semibold whitespace-nowrap">Kalamassery • Kochi</span>
+        </div>
+      </a>
+      <a href="#bookingCard" class="shrink-0 whitespace-nowrap bg-gradient-to-r from-emerald-400 to-teal-400 text-[#032018] font-extrabold text-xs sm:text-sm px-4 py-2.5 rounded-full hover:brightness-105 transition">
+        Book Slot
+      </a>
+    </div>
+  </header>
+
+  <section class="hero-bg text-white pt-8 pb-14 sm:pt-16 sm:pb-24">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 grid lg:grid-cols-12 gap-10 items-center">
+      <div class="lg:col-span-7">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/15 text-xs font-semibold mb-5">
+          <span class="text-amber-400">★★★★★</span>
+          <span>5.0 Rating • 123 Google Reviews in Kalamassery</span>
+        </div>
+
+        <h1 class="text-3xl sm:text-6xl font-extrabold tracking-tight leading-[1.08] mb-4">
+          Gentle Multispeciality Dentistry at <span class="serif italic font-normal text-emerald-300 text-4xl sm:text-7xl">HMT Junction.</span>
+        </h1>
+
+        <p class="text-emerald-50/80 text-sm sm:text-lg max-w-xl mb-7 leading-relaxed">
+          Led by <strong>Dr. Parvathy</strong> and <strong>Dr. Sandeep</strong> right opposite Food Craft Institute Sky Towers, South Kalamassery—focused on calm, thorough care for routine visits, cosmetic smiles, and specialist treatments.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-3">
+          <a href="#services" class="text-center bg-white text-[#04241b] font-extrabold px-6 py-3.5 rounded-full text-sm hover:bg-emerald-50 transition">
+            Explore Treatments →
+          </a>
+          <a href="https://maps.google.com/?q=Dr+Parvathy's+and+Dr+Sandeep's+Smile+Stories+Multispeciality+Dental+Clinic+Kalamassery" target="_blank" rel="noopener" class="text-center px-6 py-3.5 rounded-full text-sm font-bold border border-white/25 bg-white/5 hover:bg-white/15 transition">
+            Google Maps Directions
+          </a>
+        </div>
+      </div>
+
+      <div id="bookingCard" class="scroll-mt-20 lg:col-span-5 glass-box rounded-3xl p-5 sm:p-7 shadow-2xl">
+        <h2 class="text-lg sm:text-xl font-extrabold mb-1">Request an Appointment</h2>
+        <p class="text-xs text-emerald-100/75 mb-5">Pick your treatment and preferred window to message the clinic on WhatsApp.</p>
+
+        <form id="slotForm" class="space-y-3.5">
+          <div>
+            <label for="nameInput" class="block text-[11px] font-bold uppercase tracking-wider text-emerald-200 mb-1">Patient Name</label>
+            <input id="nameInput" type="text" required placeholder="Enter full name" class="w-full px-4 py-3 rounded-xl bg-white/95 text-[#062019] text-sm font-medium focus:outline-none focus:ring-2 focus:ring-emerald-400" />
+          </div>
+          <div>
+            <label for="serviceSelect" class="block text-[11px] font-bold uppercase tracking-wider text-emerald-200 mb-1">Treatment Needed</label>
+            <select id="serviceSelect" class="w-full px-4 py-3 rounded-xl bg-white/95 text-[#062019] text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-emerald-400">
+              <option value="Routine Check-up & Cleaning">Routine Check-up &amp; Cleaning</option>
+              <option value="Root Canal & Restorative Care">Root Canal &amp; Restorative Care</option>
+              <option value="Aligners / Orthodontics">Aligners / Orthodontics</option>
+              <option value="Teeth Whitening & Smile Care">Teeth Whitening &amp; Smile Care</option>
+              <option value="Dental Implants / Crowns">Dental Implants / Crowns</option>
+            </select>
+          </div>
+          <div>
+            <label for="windowSelect" class="block text-[11px] font-bold uppercase tracking-wider text-emerald-200 mb-1">Preferred Time Window</label>
+            <select id="windowSelect" class="w-full px-4 py-3 rounded-xl bg-white/95 text-[#062019] text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-emerald-400">
+              <option value="Morning / Afternoon (9:00 AM – 6:00 PM)">Morning / Afternoon (9:00 AM – 6:00 PM)</option>
+              <option value="Evening Slot (Tue/Thu 7:00 PM – 8:30 PM)">Evening Slot (Tue/Thu 7:00 PM – 8:30 PM)</option>
+              <option value="Saturday (10:00 AM – 7:30 PM)">Saturday (10:00 AM – 7:30 PM)</option>
+            </select>
+          </div>
+          <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-emerald-400 to-teal-400 text-[#032018] font-extrabold text-sm hover:brightness-105 transition">
+            Send Request via WhatsApp →
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="scroll-mt-20 py-14 sm:py-20 max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="text-center max-w-2xl mx-auto mb-10">
+      <span class="inline-block text-xs font-extrabold uppercase tracking-widest text-emerald-700 bg-emerald-100 px-3.5 py-1 rounded-full mb-3">Multispeciality Care</span>
+      <h2 class="text-3xl sm:text-5xl font-extrabold text-emerald-950">Comprehensive Care in <span class="serif italic font-normal text-emerald-700">South Kalamassery</span></h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div class="bg-white p-6 rounded-2xl border border-emerald-900/10 shadow-sm">
+        <h3 class="font-extrabold text-lg text-emerald-950 mb-2">Preventive &amp; Routine Care</h3>
+        <p class="text-sm text-slate-600">Thorough checkups, ultrasonic scaling, and cavity prevention tailored for families and students around Kalamassery.</p>
+      </div>
+      <div class="bg-white p-6 rounded-2xl border border-emerald-900/10 shadow-sm">
+        <h3 class="font-extrabold text-lg text-emerald-950 mb-2">Restorative &amp; Root Canal</h3>
+        <p class="text-sm text-slate-600">Comfortable tooth-saving treatments, durable fillings, and precision crowns designed to restore natural function.</p>
+      </div>
+      <div class="bg-white p-6 rounded-2xl border border-emerald-900/10 shadow-sm">
+        <h3 class="font-extrabold text-lg text-emerald-950 mb-2">Cosmetic &amp; Alignment</h3>
+        <p class="text-sm text-slate-600">Teeth whitening, aesthetic bonding, and orthodontic alignment options planned around your smile goals.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-14 bg-emerald-950 text-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <span class="text-xs font-extrabold uppercase tracking-widest text-emerald-300">Visit Us</span>
+        <h3 class="text-2xl sm:text-4xl font-extrabold mt-2 mb-3">Smile Stories Dental Clinic</h3>
+        <p class="text-sm sm:text-base text-emerald-100/80 mb-4">
+          First floor, opposite to Food Craft Institute Sky Towers, HMT Junction, Moolepadam Nagar, South Kalamassery, Kalamassery, Kochi, Kerala 683104
+        </p>
+        <p class="text-sm text-emerald-200 font-semibold">Phone: 075618 81771</p>
+      </div>
+      <div class="bg-white/10 border border-white/15 rounded-2xl p-6 text-sm space-y-2">
+        <h4 class="font-extrabold text-emerald-300 uppercase tracking-wider text-xs mb-2">Clinic Hours</h4>
+        <p><strong class="text-white">Mon &amp; Wed:</strong> 9:00 AM – 6:30 PM</p>
+        <p><strong class="text-white">Tue:</strong> 9:00 AM – 6:30 PM &amp; 7:00 PM – 8:30 PM</p>
+        <p><strong class="text-white">Thu:</strong> 9:00 AM – 6:00 PM &amp; 7:30 PM – 8:30 PM</p>
+        <p><strong class="text-white">Fri:</strong> 9:00 AM – 6:00 PM • <strong class="text-white">Sat:</strong> 10:00 AM – 7:30 PM</p>
+        <p><strong class="text-white">Sun:</strong> Closed</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.getElementById('slotForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const name = document.getElementById('nameInput').value.trim();
+      const service = document.getElementById('serviceSelect').value;
+      const win = document.getElementById('windowSelect').value;
+      const msg = `Hi Smile Stories Dental Clinic, I would like to request an appointment.\n• Name: ${name}\n• Treatment: ${service}\n• Preferred Time: ${win}`;
+      window.open(`https://wa.me/917561881771?text=${encodeURIComponent(msg)}`, '_blank', 'noopener');
+    });
+  </script>
+</body>
+</html>
