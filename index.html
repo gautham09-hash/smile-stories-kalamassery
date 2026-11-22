@@ -3,165 +3,672 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Smile Stories Multispeciality Dental Clinic — HMT Junction, Kalamassery</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Smile Stories — Dr. Parvathy & Dr. Sandeep | Dental Clinic, Kalamassery</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
-    html, body { font-family: 'Plus Jakarta Sans', sans-serif; background: #f6faf8; color: #071914; overflow-x: hidden; }
-    .serif { font-family: 'Instrument Serif', Georgia, serif; }
-    .hero-bg {
-      background:
-        radial-gradient(circle at 15% 20%, rgba(16, 185, 129, 0.22) 0%, transparent 45%),
-        radial-gradient(circle at 85% 15%, rgba(217, 155, 38, 0.14) 0%, transparent 40%),
-        linear-gradient(145deg, #031711 0%, #062c21 58%, #041f17 100%);
+    :root {
+      --paper: #fbf9f5;
+      --paper-warm: #f3efe6;
+      --ink: #1c221f;
+      --ink-soft: #525c57;
+      --sage: #2b5446;
+      --sage-dark: #1d3b31;
+      --terracotta: #c66b4e;
+      --border: #dfd9ce;
+      --white: #ffffff;
     }
-    .glass-box {
-      background: rgba(255, 255, 255, 0.11);
-      backdrop-filter: blur(22px) saturate(180%);
-      -webkit-backdrop-filter: blur(22px) saturate(180%);
-      border: 1px solid rgba(255, 255, 255, 0.2);
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.65;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .serif {
+      font-family: 'Fraunces', Georgia, serif;
+      font-variation-settings: "SOFT" 50, "WONK" 0;
+    }
+
+    .wrap {
+      width: 100%;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 22px;
+    }
+
+    /* Top Location Strip */
+    .note-strip {
+      background: var(--paper-warm);
+      border-bottom: 1px solid var(--border);
+      font-size: 0.78rem;
+      color: var(--ink-soft);
+      padding: 9px 0;
+    }
+    .note-strip .wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+    .note-strip a {
+      color: var(--sage);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    /* Clean Editorial Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background: rgba(251, 249, 245, 0.94);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav {
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .logo {
+      text-decoration: none;
+      color: var(--ink);
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+    }
+    .logo-title {
+      font-family: 'Fraunces', serif;
+      font-size: 1.35rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+    .logo-sub {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--ink-soft);
+      font-weight: 600;
+    }
+    .nav-menu {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+    .nav-menu a {
+      text-decoration: none;
+      color: var(--ink-soft);
+      font-size: 0.88rem;
+      font-weight: 600;
+      transition: color 0.18s;
+    }
+    .nav-menu a:hover { color: var(--ink); }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--sage);
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.86rem;
+      font-weight: 700;
+      padding: 11px 20px;
+      border-radius: 8px;
+      border: 1px solid var(--sage);
+      cursor: pointer;
+      transition: background 0.18s, transform 0.15s;
+      white-space: nowrap;
+    }
+    .btn-primary:hover { background: var(--sage-dark); }
+    .btn-primary:active { transform: translateY(1px); }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 0.86rem;
+      font-weight: 700;
+      padding: 11px 20px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      transition: border-color 0.18s, background 0.18s;
+    }
+    .btn-secondary:hover {
+      border-color: var(--ink);
+      background: var(--paper-warm);
+    }
+
+    /* Editorial Hero */
+    .hero {
+      padding: 56px 0 68px;
+      border-bottom: 1px solid var(--border);
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 48px;
+      align-items: start;
+    }
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--terracotta);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .hero h1 {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(2.35rem, 4.4vw, 3.65rem);
+      font-weight: 400;
+      line-height: 1.08;
+      letter-spacing: -0.025em;
+      margin-bottom: 20px;
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: var(--sage);
+    }
+    .hero-desc {
+      font-size: 1.03rem;
+      color: var(--ink-soft);
+      max-width: 540px;
+      margin-bottom: 28px;
+    }
+    .hero-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 36px;
+    }
+    .hero-facts {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      padding-top: 22px;
+      border-top: 1px solid var(--border);
+    }
+    .fact span {
+      display: block;
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--ink-soft);
+      margin-bottom: 2px;
+    }
+    .fact strong {
+      font-size: 0.96rem;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    /* Tactile Appointment Slip */
+    .slip-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px;
+      box-shadow: 0 14px 34px rgba(28, 34, 31, 0.05);
+    }
+    .slip-head {
+      padding-bottom: 16px;
+      margin-bottom: 18px;
+      border-bottom: 1px dashed var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    .slip-head h2 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.35rem;
+      font-weight: 600;
+    }
+    .slip-head span {
+      font-size: 0.74rem;
+      font-weight: 700;
+      color: var(--sage);
+    }
+    .form-row { margin-bottom: 14px; }
+    .form-row label {
+      display: block;
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 5px;
+    }
+    .form-row input, .form-row select {
+      width: 100%;
+      padding: 11px 12px;
+      border: 1px solid var(--border);
+      border-radius: 7px;
+      background: var(--paper);
+      font-family: inherit;
+      font-size: 0.92rem;
+      color: var(--ink);
+    }
+    .form-row input:focus, .form-row select:focus {
+      outline: 2px solid var(--sage);
+      background: var(--white);
+      border-color: transparent;
+    }
+    .slip-foot {
+      font-size: 0.76rem;
+      color: var(--ink-soft);
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    /* Doctors Section — Asymmetric Two-Column Bio */
+    .section { padding: 72px 0; border-bottom: 1px solid var(--border); }
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--terracotta);
+      margin-bottom: 10px;
+      display: block;
+    }
+    .section-title {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(1.85rem, 3.2vw, 2.6rem);
+      font-weight: 400;
+      line-height: 1.15;
+      margin-bottom: 14px;
+    }
+    .doctors-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      margin-top: 34px;
+    }
+    .doc-panel {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 30px;
+    }
+    .doc-top {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    .doc-crest {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: var(--paper-warm);
+      border: 1px solid var(--border);
+      font-family: 'Fraunces', serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--sage);
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+    }
+    .doc-panel h3 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.35rem;
+      font-weight: 600;
+    }
+    .doc-panel .tag {
+      font-size: 0.78rem;
+      color: var(--sage);
+      font-weight: 700;
+    }
+    .doc-panel p {
+      font-size: 0.93rem;
+      color: var(--ink-soft);
+    }
+
+    /* Editorial Index List for Treatments (No Card Grid!) */
+    .index-layout {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 48px;
+      align-items: start;
+    }
+    .treatment-row {
+      padding: 22px 0;
+      border-top: 1px solid var(--border);
+      display: grid;
+      grid-template-columns: 44px 1fr auto;
+      gap: 14px;
+      align-items: baseline;
+    }
+    .treatment-row:last-child { border-bottom: 1px solid var(--border); }
+    .t-num {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      color: var(--terracotta);
+      font-size: 1.05rem;
+    }
+    .treatment-row h3 {
+      font-size: 1.08rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .treatment-row p {
+      font-size: 0.9rem;
+      color: var(--ink-soft);
+    }
+    .t-action {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--sage);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .t-action:hover { text-decoration: underline; }
+
+    /* Patient Note & Clinic Timings */
+    .visit-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 36px;
+      align-items: start;
+    }
+    .quote-block {
+      background: var(--paper-warm);
+      border-left: 3px solid var(--terracotta);
+      padding: 28px;
+      border-radius: 0 12px 12px 0;
+    }
+    .quote-block blockquote {
+      font-family: 'Fraunces', serif;
+      font-size: 1.28rem;
+      line-height: 1.45;
+      color: var(--ink);
+      margin-bottom: 14px;
+    }
+    .quote-block cite {
+      font-style: normal;
+      font-size: 0.84rem;
+      font-weight: 700;
+      color: var(--ink-soft);
+    }
+    .hours-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .hours-table td {
+      padding: 12px 18px;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.88rem;
+    }
+    .hours-table tr:last-child td { border-bottom: none; }
+    .hours-table td:first-child { font-weight: 700; color: var(--ink); }
+    .hours-table td:last-child { text-align: right; color: var(--ink-soft); }
+
+    footer {
+      padding: 40px 0;
+      font-size: 0.84rem;
+      color: var(--ink-soft);
+    }
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    @media (max-width: 880px) {
+      .hero-grid, .doctors-layout, .index-layout, .visit-split { grid-template-columns: 1fr; gap: 28px; }
+      .nav-menu { display: none; }
+      .logo-sub { display: none; }
+    }
+    @media (max-width: 540px) {
+      .hero { padding: 36px 0 48px; }
+      .section { padding: 48px 0; }
+      .hero-facts { grid-template-columns: 1fr; gap: 12px; }
+      .treatment-row { grid-template-columns: 34px 1fr; }
+      .t-action { grid-column: 2; margin-top: 4px; }
     }
   </style>
 </head>
-<body class="antialiased selection:bg-emerald-500 selection:text-white">
+<body>
 
-  <div class="bg-[#02120d] text-emerald-100/85 text-[11px] sm:text-xs py-2 border-b border-white/10">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex justify-between items-center gap-2">
-      <span class="truncate">HMT Junction, South Kalamassery • Mon–Sat Care</span>
-      <a href="tel:+917561881771" class="text-emerald-300 font-bold shrink-0 hover:underline">Call 075618 81771</a>
+  <div class="note-strip">
+    <div class="wrap">
+      <span>Opp. Food Craft Institute Sky Towers, HMT Junction, South Kalamassery</span>
+      <a href="tel:+917561881771">Call 075618 81771</a>
     </div>
   </div>
 
-  <header class="sticky top-0 z-50 bg-[#041e17]/95 backdrop-blur-lg border-b border-white/10">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-3">
-      <a href="#" class="flex items-center gap-2.5 text-white min-w-0">
-        <div class="w-9 h-9 rounded-full bg-gradient-to-br from-emerald-400 to-teal-600 text-[#032018] font-extrabold flex items-center justify-center shrink-0">
-          S
-        </div>
-        <div class="leading-tight truncate">
-          <span class="block font-extrabold text-sm sm:text-base tracking-tight whitespace-nowrap">SMILE STORIES</span>
-          <span class="block text-[9.5px] uppercase tracking-widest text-emerald-300 font-semibold whitespace-nowrap">Kalamassery • Kochi</span>
-        </div>
+  <header>
+    <div class="wrap nav">
+      <a href="#" class="logo">
+        <span class="logo-title">Smile Stories</span>
+        <span class="logo-sub">Multispeciality Dental Clinic</span>
       </a>
-      <a href="#bookingCard" class="shrink-0 whitespace-nowrap bg-gradient-to-r from-emerald-400 to-teal-400 text-[#032018] font-extrabold text-xs sm:text-sm px-4 py-2.5 rounded-full hover:brightness-105 transition">
-        Book Slot
-      </a>
+      <ul class="nav-menu">
+        <li><a href="#doctors">Our Doctors</a></li>
+        <li><a href="#treatments">Treatments</a></li>
+        <li><a href="#timings">Hours & Location</a></li>
+      </ul>
+      <a href="#appointment" class="btn-primary">Book Visit</a>
     </div>
   </header>
 
-  <section class="hero-bg text-white pt-8 pb-14 sm:pt-16 sm:pb-24">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 grid lg:grid-cols-12 gap-10 items-center">
-      <div class="lg:col-span-7">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/15 text-xs font-semibold mb-5">
-          <span class="text-amber-400">★★★★★</span>
-          <span>5.0 Rating • 123 Google Reviews in Kalamassery</span>
-        </div>
-
-        <h1 class="text-3xl sm:text-6xl font-extrabold tracking-tight leading-[1.08] mb-4">
-          Gentle Multispeciality Dentistry at <span class="serif italic font-normal text-emerald-300 text-4xl sm:text-7xl">HMT Junction.</span>
-        </h1>
-
-        <p class="text-emerald-50/80 text-sm sm:text-lg max-w-xl mb-7 leading-relaxed">
-          Led by <strong>Dr. Parvathy</strong> and <strong>Dr. Sandeep</strong> right opposite Food Craft Institute Sky Towers, South Kalamassery—focused on calm, thorough care for routine visits, cosmetic smiles, and specialist treatments.
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="kicker">5.0 ★ Rated • 123 Google Reviews in Kalamassery</div>
+        <h1>Thoughtful, unhurried dental care at <em>HMT Junction.</em></h1>
+        <p class="hero-desc">
+          Dr. Parvathy’s and Dr. Sandeep’s Smile Stories Multispeciality Dental Clinic brings calm, transparent dentistry to South Kalamassery—explaining every option clearly before treatment begins.
         </p>
-
-        <div class="flex flex-col sm:flex-row gap-3">
-          <a href="#services" class="text-center bg-white text-[#04241b] font-extrabold px-6 py-3.5 rounded-full text-sm hover:bg-emerald-50 transition">
-            Explore Treatments →
-          </a>
-          <a href="https://maps.google.com/?q=Dr+Parvathy's+and+Dr+Sandeep's+Smile+Stories+Multispeciality+Dental+Clinic+Kalamassery" target="_blank" rel="noopener" class="text-center px-6 py-3.5 rounded-full text-sm font-bold border border-white/25 bg-white/5 hover:bg-white/15 transition">
-            Google Maps Directions
-          </a>
+        <div class="hero-cta-row">
+          <a href="#treatments" class="btn-secondary">View Treatments</a>
+          <a href="https://maps.google.com/?q=Dr+Parvathy's+and+Dr+Sandeep's+Smile+Stories+Multispeciality+Dental+Clinic+Kalamassery" target="_blank" rel="noopener" class="btn-secondary">Directions on Google Maps ↗</a>
+        </div>
+        <div class="hero-facts">
+          <div class="fact">
+            <span>Landmark</span>
+            <strong>Opp. Food Craft Sky Towers</strong>
+          </div>
+          <div class="fact">
+            <span>Evening Hours</span>
+            <strong>Tue & Thu till 8:30 PM</strong>
+          </div>
+          <div class="fact">
+            <span>Direct Desk</span>
+            <strong>075618 81771</strong>
+          </div>
         </div>
       </div>
 
-      <div id="bookingCard" class="scroll-mt-20 lg:col-span-5 glass-box rounded-3xl p-5 sm:p-7 shadow-2xl">
-        <h2 class="text-lg sm:text-xl font-extrabold mb-1">Request an Appointment</h2>
-        <p class="text-xs text-emerald-100/75 mb-5">Pick your treatment and preferred window to message the clinic on WhatsApp.</p>
-
-        <form id="slotForm" class="space-y-3.5">
-          <div>
-            <label for="nameInput" class="block text-[11px] font-bold uppercase tracking-wider text-emerald-200 mb-1">Patient Name</label>
-            <input id="nameInput" type="text" required placeholder="Enter full name" class="w-full px-4 py-3 rounded-xl bg-white/95 text-[#062019] text-sm font-medium focus:outline-none focus:ring-2 focus:ring-emerald-400" />
+      <div class="slip-card" id="appointment">
+        <div class="slip-head">
+          <h2>Request a Slot</h2>
+          <span>WhatsApp Desk</span>
+        </div>
+        <form id="bookingForm">
+          <div class="form-row">
+            <label for="ptName">Your Name</label>
+            <input type="text" id="ptName" placeholder="e.g., Arjun Menon" required />
           </div>
-          <div>
-            <label for="serviceSelect" class="block text-[11px] font-bold uppercase tracking-wider text-emerald-200 mb-1">Treatment Needed</label>
-            <select id="serviceSelect" class="w-full px-4 py-3 rounded-xl bg-white/95 text-[#062019] text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-emerald-400">
-              <option value="Routine Check-up & Cleaning">Routine Check-up &amp; Cleaning</option>
-              <option value="Root Canal & Restorative Care">Root Canal &amp; Restorative Care</option>
-              <option value="Aligners / Orthodontics">Aligners / Orthodontics</option>
-              <option value="Teeth Whitening & Smile Care">Teeth Whitening &amp; Smile Care</option>
-              <option value="Dental Implants / Crowns">Dental Implants / Crowns</option>
+          <div class="form-row">
+            <label for="ptNeed">Reason for Visit</label>
+            <select id="ptNeed">
+              <option value="Routine Dental Check-up & Cleaning">Routine Check-up & Cleaning</option>
+              <option value="Toothache / Root Canal Consultation">Toothache / Root Canal Care</option>
+              <option value="Braces / Clear Aligners">Braces / Clear Aligners</option>
+              <option value="Teeth Whitening & Smile Makeover">Teeth Whitening & Smile Care</option>
+              <option value="Crowns, Bridges & Implants">Crowns, Bridges & Implants</option>
+              <option value="Kids Dental Check-up">Kids Dental Check-up</option>
             </select>
           </div>
-          <div>
-            <label for="windowSelect" class="block text-[11px] font-bold uppercase tracking-wider text-emerald-200 mb-1">Preferred Time Window</label>
-            <select id="windowSelect" class="w-full px-4 py-3 rounded-xl bg-white/95 text-[#062019] text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-emerald-400">
-              <option value="Morning / Afternoon (9:00 AM – 6:00 PM)">Morning / Afternoon (9:00 AM – 6:00 PM)</option>
-              <option value="Evening Slot (Tue/Thu 7:00 PM – 8:30 PM)">Evening Slot (Tue/Thu 7:00 PM – 8:30 PM)</option>
+          <div class="form-row">
+            <label for="ptTime">Preferred Session</label>
+            <select id="ptTime">
+              <option value="Weekday Daytime (9:00 AM – 6:00 PM)">Weekday Daytime (9:00 AM – 6:00 PM)</option>
+              <option value="Tuesday / Thursday Evening (7:00 PM – 8:30 PM)">Tue / Thu Evening (7:00 PM – 8:30 PM)</option>
               <option value="Saturday (10:00 AM – 7:30 PM)">Saturday (10:00 AM – 7:30 PM)</option>
             </select>
           </div>
-          <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-emerald-400 to-teal-400 text-[#032018] font-extrabold text-sm hover:brightness-105 transition">
-            Send Request via WhatsApp →
-          </button>
+          <button type="submit" class="btn-primary" style="width: 100%; padding: 13px;">Send via WhatsApp →</button>
+          <p class="slip-foot">Opens WhatsApp with your details pre-filled for confirmation.</p>
         </form>
       </div>
     </div>
   </section>
 
-  <section id="services" class="scroll-mt-20 py-14 sm:py-20 max-w-6xl mx-auto px-4 sm:px-6">
-    <div class="text-center max-w-2xl mx-auto mb-10">
-      <span class="inline-block text-xs font-extrabold uppercase tracking-widest text-emerald-700 bg-emerald-100 px-3.5 py-1 rounded-full mb-3">Multispeciality Care</span>
-      <h2 class="text-3xl sm:text-5xl font-extrabold text-emerald-950">Comprehensive Care in <span class="serif italic font-normal text-emerald-700">South Kalamassery</span></h2>
-    </div>
-
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-      <div class="bg-white p-6 rounded-2xl border border-emerald-900/10 shadow-sm">
-        <h3 class="font-extrabold text-lg text-emerald-950 mb-2">Preventive &amp; Routine Care</h3>
-        <p class="text-sm text-slate-600">Thorough checkups, ultrasonic scaling, and cavity prevention tailored for families and students around Kalamassery.</p>
-      </div>
-      <div class="bg-white p-6 rounded-2xl border border-emerald-900/10 shadow-sm">
-        <h3 class="font-extrabold text-lg text-emerald-950 mb-2">Restorative &amp; Root Canal</h3>
-        <p class="text-sm text-slate-600">Comfortable tooth-saving treatments, durable fillings, and precision crowns designed to restore natural function.</p>
-      </div>
-      <div class="bg-white p-6 rounded-2xl border border-emerald-900/10 shadow-sm">
-        <h3 class="font-extrabold text-lg text-emerald-950 mb-2">Cosmetic &amp; Alignment</h3>
-        <p class="text-sm text-slate-600">Teeth whitening, aesthetic bonding, and orthodontic alignment options planned around your smile goals.</p>
+  <section class="section" id="doctors">
+    <div class="wrap">
+      <span class="section-label">Clinical Leadership</span>
+      <h2 class="section-title">Care led personally by Dr. Parvathy & Dr. Sandeep</h2>
+      <div class="doctors-layout">
+        <div class="doc-panel">
+          <div class="doc-top">
+            <div class="doc-crest">DP</div>
+            <div>
+              <h3>Dr. Parvathy</h3>
+              <span class="tag">Co-Founder & Dental Surgeon</span>
+            </div>
+          </div>
+          <p>Focused on gentle preventive dentistry, aesthetic restorations, and helping anxious patients and children feel completely at ease during every visit.</p>
+        </div>
+        <div class="doc-panel">
+          <div class="doc-top">
+            <div class="doc-crest">DS</div>
+            <div>
+              <h3>Dr. Sandeep</h3>
+              <span class="tag">Co-Founder & Dental Surgeon</span>
+            </div>
+          </div>
+          <p>Specializes in restorative rehabilitation, root canal therapy, and coordinated multispeciality treatment plans built around long-term oral health.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="py-14 bg-emerald-950 text-white">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-8 items-center">
+  <section class="section" id="treatments">
+    <div class="wrap index-layout">
       <div>
-        <span class="text-xs font-extrabold uppercase tracking-widest text-emerald-300">Visit Us</span>
-        <h3 class="text-2xl sm:text-4xl font-extrabold mt-2 mb-3">Smile Stories Dental Clinic</h3>
-        <p class="text-sm sm:text-base text-emerald-100/80 mb-4">
+        <span class="section-label">What We Treat</span>
+        <h2 class="section-title">Multispeciality care under one roof.</h2>
+        <p style="color: var(--ink-soft); font-size: 0.95rem;">
+          Whether you are visiting for a routine six-month cleaning or a full restorative plan, we walk you through digital X-rays and clear treatment steps before starting.
+        </p>
+      </div>
+
+      <div>
+        <div class="treatment-row">
+          <span class="t-num">01</span>
+          <div>
+            <h3>Preventive Check-ups & Ultrasonic Scaling</h3>
+            <p>Gentle plaque removal, gum health evaluation, and early cavity detection for adults and families.</p>
+          </div>
+          <a href="#appointment" class="t-action" onclick="setReason('Routine Dental Check-up & Cleaning')">Book →</a>
+        </div>
+        <div class="treatment-row">
+          <span class="t-num">02</span>
+          <div>
+            <h3>Painless Root Canal & Tooth-Colored Fillings</h3>
+            <p>Modern endodontic therapy designed to relieve tooth pain comfortably and preserve natural teeth.</p>
+          </div>
+          <a href="#appointment" class="t-action" onclick="setReason('Toothache / Root Canal Consultation')">Book →</a>
+        </div>
+        <div class="treatment-row">
+          <span class="t-num">03</span>
+          <div>
+            <h3>Orthodontics & Clear Aligners</h3>
+            <p>Discreet aligners and ceramic braces tailored for students and working professionals in Kalamassery.</p>
+          </div>
+          <a href="#appointment" class="t-action" onclick="setReason('Braces / Clear Aligners')">Book →</a>
+        </div>
+        <div class="treatment-row">
+          <span class="t-num">04</span>
+          <div>
+            <h3>Crowns, Bridges & Dental Implants</h3>
+            <p>Custom zirconia crowns and permanent tooth replacements matched to your natural bite and shade.</p>
+          </div>
+          <a href="#appointment" class="t-action" onclick="setReason('Crowns, Bridges & Implants')">Book →</a>
+        </div>
+        <div class="treatment-row">
+          <span class="t-num">05</span>
+          <div>
+            <h3>Pediatric (Kids) Dental Care</h3>
+            <p>Friendly, patient-paced checkups and fluoride protection built to give children positive dental habits early.</p>
+          </div>
+          <a href="#appointment" class="t-action" onclick="setReason('Kids Dental Check-up')">Book →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="timings" style="border-bottom: none;">
+    <div class="wrap visit-split">
+      <div>
+        <span class="section-label">Patient Feedback</span>
+        <div class="quote-block">
+          <blockquote>
+            “Rated 5.0 out of 5 across 123 Google reviews by families, students, and residents around HMT Junction and South Kalamassery.”
+          </blockquote>
+          <cite>Verified Google Maps Profile • Smile Stories Kalamassery</cite>
+        </div>
+        <p style="margin-top: 22px; font-size: 0.92rem; color: var(--ink-soft);">
+          <strong style="color: var(--ink);">Clinic Address:</strong><br />
           First floor, opposite to Food Craft Institute Sky Towers, HMT Junction, Moolepadam Nagar, South Kalamassery, Kalamassery, Kochi, Kerala 683104
         </p>
-        <p class="text-sm text-emerald-200 font-semibold">Phone: 075618 81771</p>
       </div>
-      <div class="bg-white/10 border border-white/15 rounded-2xl p-6 text-sm space-y-2">
-        <h4 class="font-extrabold text-emerald-300 uppercase tracking-wider text-xs mb-2">Clinic Hours</h4>
-        <p><strong class="text-white">Mon &amp; Wed:</strong> 9:00 AM – 6:30 PM</p>
-        <p><strong class="text-white">Tue:</strong> 9:00 AM – 6:30 PM &amp; 7:00 PM – 8:30 PM</p>
-        <p><strong class="text-white">Thu:</strong> 9:00 AM – 6:00 PM &amp; 7:30 PM – 8:30 PM</p>
-        <p><strong class="text-white">Fri:</strong> 9:00 AM – 6:00 PM • <strong class="text-white">Sat:</strong> 10:00 AM – 7:30 PM</p>
-        <p><strong class="text-white">Sun:</strong> Closed</p>
+
+      <div>
+        <span class="section-label">Weekly Schedule</span>
+        <table class="hours-table">
+          <tr><td>Monday</td><td>9:00 AM – 6:30 PM</td></tr>
+          <tr><td>Tuesday</td><td>9:00 AM – 6:30 PM, 7:00 PM – 8:30 PM</td></tr>
+          <tr><td>Wednesday</td><td>9:00 AM – 6:30 PM</td></tr>
+          <tr><td>Thursday</td><td>9:00 AM – 6:30 PM, 7:30 PM – 8:30 PM</td></tr>
+          <tr><td>Friday</td><td>9:00 AM – 6:00 PM</td></tr>
+          <tr><td>Saturday</td><td>10:00 AM – 7:30 PM</td></tr>
+          <tr><td>Sunday</td><td>Closed</td></tr>
+        </table>
       </div>
     </div>
   </section>
 
+  <footer>
+    <div class="wrap footer-row">
+      <span><strong>Dr. Parvathy’s & Dr. Sandeep’s Smile Stories</strong> — South Kalamassery, Kochi</span>
+      <span>Concept Website Preview</span>
+    </div>
+  </footer>
+
   <script>
-    document.getElementById('slotForm').addEventListener('submit', function (e) {
+    function setReason(val) {
+      document.getElementById('ptNeed').value = val;
+      setTimeout(() => document.getElementById('ptName').focus(), 400);
+    }
+
+    document.getElementById('bookingForm').addEventListener('submit', function (e) {
       e.preventDefault();
-      const name = document.getElementById('nameInput').value.trim();
-      const service = document.getElementById('serviceSelect').value;
-      const win = document.getElementById('windowSelect').value;
-      const msg = `Hi Smile Stories Dental Clinic, I would like to request an appointment.\n• Name: ${name}\n• Treatment: ${service}\n• Preferred Time: ${win}`;
+      const name = document.getElementById('ptName').value.trim();
+      const need = document.getElementById('ptNeed').value;
+      const time = document.getElementById('ptTime').value;
+      const msg = `Hi Dr. Parvathy & Dr. Sandeep's Smile Stories, I would like to book an appointment.\n• Name: ${name}\n• Treatment: ${need}\n• Preferred Time: ${time}`;
       window.open(`https://wa.me/917561881771?text=${encodeURIComponent(msg)}`, '_blank', 'noopener');
     });
   </script>
